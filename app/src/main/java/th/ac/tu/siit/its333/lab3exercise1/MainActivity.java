@@ -81,6 +81,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         GPA = GradePoint/credit;
+        if(credit ==0){
+            GPA =0;
+        }
 
         TextView tvGP = (TextView)findViewById(R.id.tvGP);
         TextView tvCr = (TextView)findViewById(R.id.tvCR);
@@ -132,6 +135,7 @@ public class MainActivity extends ActionBarActivity {
 
             case R.id.button:
                 //reset
+
                 int cr = 0;         // Credits
                 double gp = 0.0;    // Grade points
                 double gpa = 0.0;   // Grade point average
